@@ -5,22 +5,50 @@ package entity;
  */
 
 public class User {
-    private  String password;
-    private String account;
+    private Integer id;
+    private String name;
+    private String pwd;
 
-    public String getPassword() {
-        return password;
+    public Integer getId() {
+        return id;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getAccount() {
-        return account;
+    public String getName() {
+        return name;
     }
 
-    public void setAccount(String account) {
-        this.account = account;
+    public void setName(String name) {
+        this.name = name;
     }
+
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
+
+    @Override
+    public String toString() {
+        return "User [id=" + id + ", name=" + name + ", pwd=" + pwd + "]";
+    }
+
+    public User(Integer id, String name, String pwd) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.pwd = pwd;
+    }
+
+    public User() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+
 }

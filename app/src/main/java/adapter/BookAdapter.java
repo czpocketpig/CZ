@@ -44,12 +44,17 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         BookInfo bookInfo = bookInfos.get(position);
-        holder.bookname_or_author.setText(bookInfo.getBookname() + bookInfo.getAuthor());
-        holder.publisher.setText("aaaaaaaaa");
-        Log.i(TAG, "onBindViewHolder: " + bookInfo.isBorrow() + 1);
+        holder.bookname_or_author.setText(bookInfo.getName() + bookInfo.getAuthor());
+        holder.publisher.setText(bookInfo.getPublisher());
+//        Log.i(TAG, "onBindViewHolder: " + bookInfo.isBorrow() + 1);
+      if (bookInfo.getState()==1)
+      {
         holder.isBorrow.setText("可借");
-        holder.time.setText("aaaaaaaaa");
-
+        holder.time.setText(bookInfo.getPlace());
+      }else{
+          holder.isBorrow.setText("不可借");
+          holder.time.setText(bookInfo.getReturnDate());
+      }
 
     }
 

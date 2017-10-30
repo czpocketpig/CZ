@@ -5,19 +5,42 @@ package entity;
  */
 
 public class BookInfo {
-    private String bookname;
-    private String pubilsher;
-    private String time;
-    private String place;
+    private Integer id;
+    private String name;
     private String author;
-    private boolean isBorrow;
+    private String isbn;
+    private String publisher;
+    private String publishDate;
+    private String type;
+    private int state;
+    private String introduction;
+    private String authorInfo;
+    private String borrowDate;
+    private String returnDate;
+    private String place;
 
-    public boolean isBorrow() {
-        return isBorrow;
+    public String getPlace() {
+        return place;
     }
 
-    public void setBorrow(boolean borrow) {
-        isBorrow = borrow;
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getAuthor() {
@@ -28,35 +51,75 @@ public class BookInfo {
         this.author = author;
     }
 
-    public String getBookname() {
-        return bookname;
+    public String getIsbn() {
+        return isbn;
     }
 
-    public void setBookname(String bookname) {
-        this.bookname = bookname;
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 
-    public String getPubilsher() {
-        return pubilsher;
+    public String getPublisher() {
+        return publisher;
     }
 
-    public void setPubilsher(String pubilsher) {
-        this.pubilsher = pubilsher;
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
     }
 
-    public String getTime() {
-        return time;
+    public String getPublishDate() {
+        return publishDate;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setPublishDate(String publishDate) {
+        this.publishDate = publishDate;
     }
 
-    public String getPlace() {
-        return place;
+    public String getType() {
+        return type;
     }
 
-    public void setPlace(String place) {
-        this.place = place;
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int state) {
+        this.state = state;
+    }
+
+    public String getIntroduction() {
+        return introduction;
+    }
+
+    public void setIntroduction(String introduction) {
+        this.introduction = introduction;
+    }
+
+    public String getAuthorInfo() {
+        return authorInfo;
+    }
+
+    public void setAuthorInfo(String authorInfo) {
+        this.authorInfo = authorInfo;
+    }
+
+    public String getBorrowDate() {
+        return borrowDate;
+    }
+
+    public void setBorrowDate(String borrowDate) {
+        this.borrowDate = borrowDate;
+    }
+
+    public String getReturnDate() {
+        return returnDate;
+    }
+
+    public void setReturnDate(String returnDate) {
+        this.returnDate = returnDate;
     }
 }
